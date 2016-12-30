@@ -4,7 +4,7 @@ The **Yet Another Framework** (Yaf) 扩展是一个用来开发web应用的php�
   
 Yaf需要5.2.1及以上版本PHP，早期版本可能不能正常工作。
 
-这里有一个简单的Yaf性能测试。[Yaf性能](benchmarks.md).
+这里有一个简单的Yaf性能测试。[Yaf性能](http://www.laruence.com/2011/12/02/2333.html).
   
 快速入门请参见 [教程](tutorials.md) .
 
