@@ -2,7 +2,7 @@
 
 ## Example #1 一个典型的应用目录结构
 
-```
+```bash
 - index.php 
 - .htaccess 
 + conf
@@ -19,10 +19,12 @@
   - models  
   - plugins 
 ```
+
 ## Example #2 入口文件
 
 顶层目录下的index.php是整个应用的唯一入口，应该把所有请求都重定向到这个文件（在Apache+php_mod模式下可以使用.htaccess）。
-```
+
+```php
 <?php
 define("APPLICATION_PATH",  dirname(__FILE__));
 
@@ -31,15 +33,18 @@ $app->bootstrap() //call bootstrap methods defined in Bootstrap.php
  ->run();
 ?>
 ```
+
 ## Example #3 重写规则
 
-```
+```bash
 #for apache (.htaccess)
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* index.php
 ```
-```
+
+
+```bash
 #for nginx
 server {
   listen ****;
@@ -52,7 +57,9 @@ server {
   }
 }
 ```
-```
+
+
+```bash
 #for lighttpd
 $HTTP["host"] =~ "(www.)?domain.com$" {
   url.rewrite = (
@@ -60,8 +67,10 @@ $HTTP["host"] =~ "(www.)?domain.com$" {
   )
 }
 ```
+
 ## Example #4 应用配置文件
-```
+
+```bash
 [yaf]
 ;APPLICATION_PATH is the constant defined in index.php
 application.directory=APPLICATION_PATH "/application/" 
@@ -72,7 +81,8 @@ foo=bar
 ```
 
 ## Example #5 默认控制器
-```
+
+```php
 <?php
 class IndexController extends Yaf_Controller_Abstract {
    /* default action */
@@ -84,8 +94,10 @@ class IndexController extends Yaf_Controller_Abstract {
 }
 ?>
 ```
+
 ## Example #6 默认视图文件
-```
+
+```php
 <html>
  <head>
    <title>Hello World</title>
@@ -95,10 +107,12 @@ class IndexController extends Yaf_Controller_Abstract {
  </body>
 </html>
 ```
+
 ## Example #7 运行应用
 
 以上例程的输出类似于：
-```
+
+```php
 <html>
  <head>
    <title>Hello World</title>
@@ -108,5 +122,7 @@ class IndexController extends Yaf_Controller_Abstract {
  </body>
 </html>
 ```
-## Note:
+
+## 备注
+
 在yaf@github上有Yaf代码生成器，你也可以用它来生成上面的例子。
