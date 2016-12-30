@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>简介 · GitBook</title>
+        <title>运行时配置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="setup.html" />
+    <link rel="next" href="resources.md" />
     
+    
+    <link rel="prev" href="installation.html" />
     
 
     </head>
@@ -87,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -140,7 +142,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="runtime-configure.html">
+        <li class="chapter active" data-level="1.2.3" data-path="runtime-configure.html">
             
                 <a href="runtime-configure.html">
             
@@ -4140,7 +4142,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >简介</a>
+        <a href="." >运行时配置</a>
     </h1>
 </div>
 
@@ -4155,364 +4157,134 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="yaf&#x4E2D;&#x6587;&#x6587;&#x6863;">Yaf&#x4E2D;&#x6587;&#x6587;&#x6863;</h3>
-<p>The <strong>Yet Another Framework</strong> (Yaf) &#x6269;&#x5C55;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x5F00;&#x53D1;web&#x5E94;&#x7528;&#x7684;php&#x6846;&#x67B6;&#x3002;</p>
-<p>Yaf&#x9700;&#x8981;5.2.1&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;PHP&#xFF0C;&#x65E9;&#x671F;&#x7248;&#x672C;&#x53EF;&#x80FD;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x3002;</p>
-<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;Yaf&#x6027;&#x80FD;&#x6D4B;&#x8BD5;&#x3002;<a href="benchmarks.md">Yaf&#x6027;&#x80FD;</a>.</p>
-<p>&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x8BF7;&#x53C2;&#x89C1; <a href="tutorials.html">&#x6559;&#x7A0B;</a> .</p>
+                                <h1 id="&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;">&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;</h1>
+<p>&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x884C;&#x4E3A;&#x53D7; php.ini &#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x5F71;&#x54CD;&#x3002;</p>
+<h2 id="yaf-&#x914D;&#x7F6E;&#x9009;&#x9879;">Yaf &#x914D;&#x7F6E;&#x9009;&#x9879;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x540D;&#x5B57;</th>
+<th>&#x9ED8;&#x8BA4;</th>
+<th>&#x53EF;&#x4FEE;&#x6539;&#x8303;&#x56F4;</th>
+<th>&#x66F4;&#x65B0;&#x65E5;&#x5FD7;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yaf.library</td>
+<td></td>
+<td>its PHP_INI_ALL  value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.action_prefer</td>
+<td>0</td>
+<td>its PHP_INI_ALL value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.lowcase_path</td>
+<td>0</td>
+<td>its PHP_INI_ALL value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.use_spl_autoload</td>
+<td>0</td>
+<td>its PHP_INI_ALL value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.forward_limit</td>
+<td>5</td>
+<td>its PHP_INI_ALL value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.name_suffix</td>
+<td>1</td>
+<td>its PHP_INI_ALL value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.name_separator</td>
+<td></td>
+<td>its PHP_INI_ALL value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.cache_config</td>
+<td>0</td>
+<td>its PHP_INI_SYSTEM value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.environ</td>
+<td>product</td>
+<td>its PHP_INI_SYSTEM value</td>
+<td></td>
+</tr>
+<tr>
+<td>yaf.use_namespace</td>
+<td>0</td>
+<td>its PHP_INI_ALL value</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD9;&#x662F;&#x914D;&#x7F6E;&#x6307;&#x4EE4;&#x7684;&#x7B80;&#x77ED;&#x8BF4;&#x660E;&#x3002;</p>
+<h2 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h2>
 <ul>
-<li><a href="./">&#x7B80;&#x4ECB;</a></li>
-<li><a href="setup.html">&#x5B89;&#x88C5;&#x914D;&#x7F6E;</a><ul>
-<li><a href="requirement.html">&#x9700;&#x6C42;</a></li>
-<li><a href="installation.html">&#x5B89;&#x88C5;</a></li>
-<li><a href="runtime-configure.html">&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;</a></li>
-<li><a href="resources.md">&#x8D44;&#x6E90;&#x7C7B;&#x578B;</a></li>
-</ul>
+<li><p>yaf.library string
+The global library path, Yaf_loader will search global library in this directory.</p>
 </li>
-<li><a href="constants.html">&#x9884;&#x5B9A;&#x4E49;&#x5E38;&#x91CF;</a></li>
-<li><a href="tutorials.html">&#x8303;&#x4F8B;</a></li>
-<li><a href="appconfig.html">&#x5E94;&#x7528;&#x914D;&#x7F6E;</a></li>
-<li>Yaf_Application &#x2014; The Yaf_Application class<ul>
-<li>Yaf_Application::app &#x2014; Retrieve an Application instance</li>
-<li>Yaf_Application::bootstrap &#x2014; Call bootstrap</li>
-<li>Yaf_Application::clearLastError &#x2014; Clear the last error info</li>
-<li>Yaf_Application::__clone &#x2014; Yaf_Application can not be cloned</li>
-<li>Yaf_Application::__construct &#x2014; Yaf_Application constructor</li>
-<li>Yaf_Application::<strong>destruct &#x2014; The </strong>destruct purpose</li>
-<li>Yaf_Application::environ &#x2014; Retrive environ</li>
-<li>Yaf_Application::execute &#x2014; Execute a callback</li>
-<li>Yaf_Application::getAppDirectory &#x2014; Get the application directory</li>
-<li>Yaf_Application::getConfig &#x2014; Retrive the config instance</li>
-<li>Yaf_Application::getDispatcher &#x2014; Get Yaf_Dispatcher instance</li>
-<li>Yaf_Application::getLastErrorMsg &#x2014; Get message of the last occurred error</li>
-<li>Yaf_Application::getLastErrorNo &#x2014; Get code of last occurred error</li>
-<li>Yaf_Application::getModules &#x2014; Get defined module names</li>
-<li>Yaf_Application::run &#x2014; Start Yaf_Application</li>
-<li>Yaf_Application::setAppDirectory &#x2014; Change the application directory</li>
-<li>Yaf_Application::__sleep &#x2014; Yaf_Application can not be serialized</li>
-<li>Yaf_Application::__wakeup &#x2014; Yaf_Application can not be unserialized</li>
-</ul>
-</li>
-<li>Yaf_Bootstrap_Abstract &#x2014; The Yaf_Bootstrap_Abstract class</li>
-<li>Yaf_Dispatcher &#x2014; The Yaf_Dispatcher class<ul>
-<li>Yaf_Dispatcher::autoRender &#x2014; Switch on/off autorendering</li>
-<li>Yaf_Dispatcher::catchException &#x2014; Switch on/off exception catching</li>
-<li>Yaf_Dispatcher::__clone &#x2014; Yaf_Dispatcher can not be cloned</li>
-<li>Yaf_Dispatcher::__construct &#x2014; Yaf_Dispatcher constructor</li>
-<li>Yaf_Dispatcher::disableView &#x2014; Disable view rendering</li>
-<li>Yaf_Dispatcher::dispatch &#x2014; Dispatch a request</li>
-<li>Yaf_Dispatcher::enableView &#x2014; enable view rendering</li>
-<li>Yaf_Dispatcher::flushInstantly &#x2014; Switch on/off the instant flushing</li>
-<li>Yaf_Dispatcher::getApplication &#x2014; Retrive the application</li>
-<li>Yaf_Dispatcher::getInstance &#x2014; Retrive the dispatcher instance</li>
-<li>Yaf_Dispatcher::getRequest &#x2014; Retrive the request instance</li>
-<li>Yaf_Dispatcher::getRouter &#x2014; Retrive router instance</li>
-<li>Yaf_Dispatcher::initView &#x2014; Initialize view and return it</li>
-<li>Yaf_Dispatcher::registerPlugin &#x2014; Register a plugin</li>
-<li>Yaf_Dispatcher::returnResponse &#x2014; The returnResponse purpose</li>
-<li>Yaf_Dispatcher::setDefaultAction &#x2014; Change default action name</li>
-<li>Yaf_Dispatcher::setDefaultController &#x2014; Change default controller name</li>
-<li>Yaf_Dispatcher::setDefaultModule &#x2014; Change default module name</li>
-<li>Yaf_Dispatcher::setErrorHandler &#x2014; Set error handler</li>
-<li>Yaf_Dispatcher::setRequest &#x2014; The setRequest purpose</li>
-<li>Yaf_Dispatcher::setView &#x2014; Set a custom view engine</li>
-<li>Yaf_Dispatcher::__sleep &#x2014; Yaf_Dispatcher can not be serialized</li>
-<li>Yaf_Dispatcher::throwException &#x2014; Switch on/off exception throwing</li>
-<li>Yaf_Dispatcher::__wakeup &#x2014; Yaf_Dispatcher can not be unserialized</li>
-</ul>
-</li>
-<li>Yaf_Config_Abstract &#x2014; The Yaf_Config_Abstract class<ul>
-<li>Yaf_Config_Abstract::get &#x2014; Getter</li>
-<li>Yaf_Config_Abstract::readonly &#x2014; Find a config whether readonly</li>
-<li>Yaf_Config_Abstract::set &#x2014; Setter</li>
-<li>Yaf_Config_Abstract::toArray &#x2014; Cast to array</li>
-</ul>
-</li>
-<li>Yaf_Config_Ini &#x2014; The Yaf_Config_Ini class<ul>
-<li>Yaf_Config_Ini::__construct &#x2014; Yaf_Config_Ini constructor</li>
-<li>Yaf_Config_Ini::count &#x2014; The count purpose</li>
-<li>Yaf_Config_Ini::current &#x2014; The current purpose</li>
-<li>Yaf_Config_Ini::<strong>get &#x2014; The </strong>get purpose</li>
-<li>Yaf_Config_Ini::<strong>isset &#x2014; The </strong>isset purpose</li>
-<li>Yaf_Config_Ini::key &#x2014; The key purpose</li>
-<li>Yaf_Config_Ini::next &#x2014; The next purpose</li>
-<li>Yaf_Config_Ini::offsetExists &#x2014; The offsetExists purpose</li>
-<li>Yaf_Config_Ini::offsetGet &#x2014; The offsetGet purpose</li>
-<li>Yaf_Config_Ini::offsetSet &#x2014; The offsetSet purpose</li>
-<li>Yaf_Config_Ini::offsetUnset &#x2014; The offsetUnset purpose</li>
-<li>Yaf_Config_Ini::readonly &#x2014; The readonly purpose</li>
-<li>Yaf_Config_Ini::rewind &#x2014; The rewind purpose</li>
-<li>Yaf_Config_Ini::<strong>set &#x2014; The </strong>set purpose</li>
-<li>Yaf_Config_Ini::toArray &#x2014; Returns a PHP array</li>
-<li>Yaf_Config_Ini::valid &#x2014; The valid purpose</li>
-</ul>
-</li>
-<li>Yaf_Config_Simple &#x2014; The Yaf_Config_Simple class<ul>
-<li>Yaf_Config_Simple::<strong>construct &#x2014; The </strong>construct purpose</li>
-<li>Yaf_Config_Simple::count &#x2014; The count purpose</li>
-<li>Yaf_Config_Simple::current &#x2014; The current purpose</li>
-<li>Yaf_Config_Simple::<strong>get &#x2014; The </strong>get purpose</li>
-<li>Yaf_Config_Simple::<strong>isset &#x2014; The </strong>isset purpose</li>
-<li>Yaf_Config_Simple::key &#x2014; The key purpose</li>
-<li>Yaf_Config_Simple::next &#x2014; The next purpose</li>
-<li>Yaf_Config_Simple::offsetExists &#x2014; The offsetExists purpose</li>
-<li>Yaf_Config_Simple::offsetGet &#x2014; The offsetGet purpose</li>
-<li>Yaf_Config_Simple::offsetSet &#x2014; The offsetSet purpose</li>
-<li>Yaf_Config_Simple::offsetUnset &#x2014; The offsetUnset purpose</li>
-<li>Yaf_Config_Simple::readonly &#x2014; The readonly purpose</li>
-<li>Yaf_Config_Simple::rewind &#x2014; The rewind purpose</li>
-<li>Yaf_Config_Simple::<strong>set &#x2014; The </strong>set purpose</li>
-<li>Yaf_Config_Simple::toArray &#x2014; Returns a PHP array</li>
-<li>Yaf_Config_Simple::valid &#x2014; The valid purpose</li>
-</ul>
-</li>
-<li>Yaf_Controller_Abstract &#x2014; The Yaf_Controller_Abstract class<ul>
-<li>Yaf_Controller_Abstract::__clone &#x2014; Yaf_Controller_Abstract can not be cloned</li>
-<li>Yaf_Controller_Abstract::__construct &#x2014; Yaf_Controller_Abstract constructor</li>
-<li>Yaf_Controller_Abstract::display &#x2014; The display purpose</li>
-<li>Yaf_Controller_Abstract::forward &#x2014; foward to another action</li>
-<li>Yaf_Controller_Abstract::getInvokeArg &#x2014; The getInvokeArg purpose</li>
-<li>Yaf_Controller_Abstract::getInvokeArgs &#x2014; The getInvokeArgs purpose</li>
-<li>Yaf_Controller_Abstract::getModuleName &#x2014; Get module name</li>
-<li>Yaf_Controller_Abstract::getRequest &#x2014; Retrieve current request object</li>
-<li>Yaf_Controller_Abstract::getResponse &#x2014; Retrieve current response object</li>
-<li>Yaf_Controller_Abstract::getView &#x2014; Retrieve the view engine</li>
-<li>Yaf_Controller_Abstract::getViewpath &#x2014; The getViewpath purpose</li>
-<li>Yaf_Controller_Abstract::init &#x2014; Controller initializer</li>
-<li>Yaf_Controller_Abstract::initView &#x2014; The initView purpose</li>
-<li>Yaf_Controller_Abstract::redirect &#x2014; Redirect to a URL</li>
-<li>Yaf_Controller_Abstract::render &#x2014; Render view template</li>
-<li>Yaf_Controller_Abstract::setViewpath &#x2014; The setViewpath purpose</li>
-</ul>
-</li>
-<li>Yaf_Action_Abstract &#x2014; The Yaf_Action_Abstract class<ul>
-<li>Yaf_Action_Abstract::execute &#x2014; Action entry point</li>
-<li>Yaf_Action_Abstract::getController &#x2014; Retrieve controller object</li>
-</ul>
-</li>
-<li>Yaf_View_Interface &#x2014; The Yaf_View_Interface class<ul>
-<li>Yaf_View_Interface::assign &#x2014; Assign value to View engine</li>
-<li>Yaf_View_Interface::display &#x2014; Render and output a template</li>
-<li>Yaf_View_Interface::getScriptPath &#x2014; The getScriptPath purpose</li>
-<li>Yaf_View_Interface::render &#x2014; Render a template</li>
-<li>Yaf_View_Interface::setScriptPath &#x2014; The setScriptPath purpose</li>
-</ul>
-</li>
-<li>Yaf_View_Simple &#x2014; The Yaf_View_Simple class<ul>
-<li>Yaf_View_Simple::assign &#x2014; Assign values</li>
-<li>Yaf_View_Simple::assignRef &#x2014; The assignRef purpose</li>
-<li>Yaf_View_Simple::clear &#x2014; Clear Assigned values</li>
-<li>Yaf_View_Simple::__construct &#x2014; Constructor of Yaf_View_Simple</li>
-<li>Yaf_View_Simple::display &#x2014; Render and display</li>
-<li>Yaf_View_Simple::eval &#x2014; Render template</li>
-<li>Yaf_View_Simple::__get &#x2014; Retrieve assigned variable</li>
-<li>Yaf_View_Simple::getScriptPath &#x2014; Get templates directory</li>
-<li>Yaf_View_Simple::<strong>isset &#x2014; The </strong>isset purpose</li>
-<li>Yaf_View_Simple::render &#x2014; Render template</li>
-<li>Yaf_View_Simple::__set &#x2014; Set value to engine</li>
-<li>Yaf_View_Simple::setScriptPath &#x2014; Set tempaltes directory</li>
-</ul>
-</li>
-<li>Yaf_Loader &#x2014; The Yaf_Loader class<ul>
-<li>Yaf_Loader::autoload &#x2014; The autoload purpose</li>
-<li>Yaf_Loader::clearLocalNamespace &#x2014; The clearLocalNamespace purpose</li>
-<li>Yaf_Loader::<strong>clone &#x2014; The </strong>clone purpose</li>
-<li>Yaf_Loader::<strong>construct &#x2014; The </strong>construct purpose</li>
-<li>Yaf_Loader::getInstance &#x2014; The getInstance purpose</li>
-<li>Yaf_Loader::getLibraryPath &#x2014; get the library path</li>
-<li>Yaf_Loader::getLocalNamespace &#x2014; The getLocalNamespace purpose</li>
-<li>Yaf_Loader::import &#x2014; The import purpose</li>
-<li>Yaf_Loader::isLocalName &#x2014; The isLocalName purpose</li>
-<li>Yaf_Loader::registerLocalNamespace &#x2014; register local class prefix</li>
-<li>Yaf_Loader::setLibraryPath &#x2014; Change the library path</li>
-<li>Yaf_Loader::<strong>sleep &#x2014; The </strong>sleep purpose</li>
-<li>Yaf_Loader::<strong>wakeup &#x2014; The </strong>wakeup purpose</li>
-</ul>
-</li>
-<li>Yaf_Plugin_Abstract &#x2014; The Yaf_Plugin_Abstract class<ul>
-<li>Yaf_Plugin_Abstract::dispatchLoopShutdown &#x2014; The dispatchLoopShutdown purpose</li>
-<li>Yaf_Plugin_Abstract::dispatchLoopStartup &#x2014; The dispatchLoopStartup purpose</li>
-<li>Yaf_Plugin_Abstract::postDispatch &#x2014; The postDispatch purpose</li>
-<li>Yaf_Plugin_Abstract::preDispatch &#x2014; The preDispatch purpose</li>
-<li>Yaf_Plugin_Abstract::preResponse &#x2014; The preResponse purpose</li>
-<li>Yaf_Plugin_Abstract::routerShutdown &#x2014; The routerShutdown purpose</li>
-<li>Yaf_Plugin_Abstract::routerStartup &#x2014; RouterStartup hook</li>
-</ul>
-</li>
-<li>Yaf_Registry &#x2014; The Yaf_Registry class<ul>
-<li>Yaf_Registry::<strong>clone &#x2014; The </strong>clone purpose</li>
-<li>Yaf_Registry::__construct &#x2014; Yaf_Registry implements singleton</li>
-<li>Yaf_Registry::del &#x2014; Remove an item from registry</li>
-<li>Yaf_Registry::get &#x2014; Retrieve an item from registry</li>
-<li>Yaf_Registry::has &#x2014; Check whether an item exists</li>
-<li>Yaf_Registry::set &#x2014; Add an item into registry</li>
-</ul>
-</li>
-<li>Yaf_Request_Abstract &#x2014; The Yaf_Request_Abstract class<ul>
-<li>Yaf_Request_Abstract::getActionName &#x2014; The getActionName purpose</li>
-<li>Yaf_Request_Abstract::getBaseUri &#x2014; The getBaseUri purpose</li>
-<li>Yaf_Request_Abstract::getControllerName &#x2014; The getControllerName purpose</li>
-<li>Yaf_Request_Abstract::getEnv &#x2014; Retrieve ENV varialbe</li>
-<li>Yaf_Request_Abstract::getException &#x2014; The getException purpose</li>
-<li>Yaf_Request_Abstract::getLanguage &#x2014; The getLanguage purpose</li>
-<li>Yaf_Request_Abstract::getMethod &#x2014; The getMethod purpose</li>
-<li>Yaf_Request_Abstract::getModuleName &#x2014; The getModuleName purpose</li>
-<li>Yaf_Request_Abstract::getParam &#x2014; The getParam purpose</li>
-<li>Yaf_Request_Abstract::getParams &#x2014; The getParams purpose</li>
-<li>Yaf_Request_Abstract::getRequestUri &#x2014; The getRequestUri purpose</li>
-<li>Yaf_Request_Abstract::getServer &#x2014; Retrieve SERVER variable</li>
-<li>Yaf_Request_Abstract::isCli &#x2014; The isCli purpose</li>
-<li>Yaf_Request_Abstract::isDispatched &#x2014; The isDispatched purpose</li>
-<li>Yaf_Request_Abstract::isGet &#x2014; The isGet purpose</li>
-<li>Yaf_Request_Abstract::isHead &#x2014; The isHead purpose</li>
-<li>Yaf_Request_Abstract::isOptions &#x2014; The isOptions purpose</li>
-<li>Yaf_Request_Abstract::isPost &#x2014; The isPost purpose</li>
-<li>Yaf_Request_Abstract::isPut &#x2014; The isPut purpose</li>
-<li>Yaf_Request_Abstract::isRouted &#x2014; The isRouted purpose</li>
-<li>Yaf_Request_Abstract::isXmlHttpRequest &#x2014; The isXmlHttpRequest purpose</li>
-<li>Yaf_Request_Abstract::setActionName &#x2014; The setActionName purpose</li>
-<li>Yaf_Request_Abstract::setBaseUri &#x2014; set base URI</li>
-<li>Yaf_Request_Abstract::setControllerName &#x2014; The setControllerName purpose</li>
-<li>Yaf_Request_Abstract::setDispatched &#x2014; The setDispatched purpose</li>
-<li>Yaf_Request_Abstract::setModuleName &#x2014; The setModuleName purpose</li>
-<li>Yaf_Request_Abstract::setParam &#x2014; The setParam purpose</li>
-<li>Yaf_Request_Abstract::setRequestUri &#x2014; The setRequestUri purpose</li>
-<li>Yaf_Request_Abstract::setRouted &#x2014; The setRouted purpose</li>
-</ul>
-</li>
-<li>Yaf_Request_Http &#x2014; The Yaf_Request_Http class<ul>
-<li>Yaf_Request_Http::<strong>clone &#x2014; The </strong>clone purpose</li>
-<li>Yaf_Request_Http::__construct &#x2014; Constructor of Yaf_Request_Http</li>
-<li>Yaf_Request_Http::get &#x2014; Retrieve variable from client</li>
-<li>Yaf_Request_Http::getCookie &#x2014; Retrieve Cookie variable</li>
-<li>Yaf_Request_Http::getFiles &#x2014; The getFiles purpose</li>
-<li>Yaf_Request_Http::getPost &#x2014; Retrieve POST variable</li>
-<li>Yaf_Request_Http::getQuery &#x2014; Fetch a query parameter</li>
-<li>Yaf_Request_Http::getRequest &#x2014; The getRequest purpose</li>
-<li>Yaf_Request_Http::isXmlHttpRequest &#x2014; Whether a Ajax Request</li>
-</ul>
-</li>
-<li>Yaf_Request_Simple &#x2014; The Yaf_Request_Simple class<ul>
-<li>Yaf_Request_Simple::<strong>clone &#x2014; The </strong>clone purpose</li>
-<li>Yaf_Request_Simple::__construct &#x2014; Constructor of Yaf_Request_Simple</li>
-<li>Yaf_Request_Simple::get &#x2014; The get purpose</li>
-<li>Yaf_Request_Simple::getCookie &#x2014; The getCookie purpose</li>
-<li>Yaf_Request_Simple::getFiles &#x2014; The getFiles purpose</li>
-<li>Yaf_Request_Simple::getPost &#x2014; The getPost purpose</li>
-<li>Yaf_Request_Simple::getQuery &#x2014; The getQuery purpose</li>
-<li>Yaf_Request_Simple::getRequest &#x2014; The getRequest purpose</li>
-<li>Yaf_Request_Simple::isXmlHttpRequest &#x2014; The isXmlHttpRequest purpose</li>
-</ul>
-</li>
-<li>Yaf_Response_Abstract &#x2014; The Yaf_Response_Abstract class<ul>
-<li>Yaf_Response_Abstract::appendBody &#x2014; append to body</li>
-<li>Yaf_Response_Abstract::clearBody &#x2014; The clearBody purpose</li>
-<li>Yaf_Response_Abstract::clearHeaders &#x2014; The clearHeaders purpose</li>
-<li>Yaf_Response_Abstract::<strong>clone &#x2014; The </strong>clone purpose</li>
-<li>Yaf_Response_Abstract::<strong>construct &#x2014; The </strong>construct purpose</li>
-<li>Yaf_Response_Abstract::<strong>destruct &#x2014; The </strong>destruct purpose</li>
-<li>Yaf_Response_Abstract::getBody &#x2014; Retrieve a exists content</li>
-<li>Yaf_Response_Abstract::getHeader &#x2014; The getHeader purpose</li>
-<li>Yaf_Response_Abstract::prependBody &#x2014; The prependBody purpose</li>
-<li>Yaf_Response_Abstract::response &#x2014; send response</li>
-<li>Yaf_Response_Abstract::setAllHeaders &#x2014; The setAllHeaders purpose</li>
-<li>Yaf_Response_Abstract::setBody &#x2014; Set content to response</li>
-<li>Yaf_Response_Abstract::setHeader &#x2014; The setHeader purpose</li>
-<li>Yaf_Response_Abstract::setRedirect &#x2014; The setRedirect purpose</li>
-<li>Yaf_Response_Abstract::<strong>toString &#x2014; The </strong>toString purpose</li>
-</ul>
-</li>
-<li>Yaf_Route_Interface &#x2014; The Yaf_Route_Interface class<ul>
-<li>Yaf_Route_Interface::assemble &#x2014; assemble a request</li>
-<li>Yaf_Route_Interface::route &#x2014; route a request</li>
-</ul>
-</li>
-<li>Yaf_Route_Map &#x2014; The Yaf_Route_Map class<ul>
-<li>Yaf_Route_Map::assemble &#x2014; Assemble a url</li>
-<li>Yaf_Route_Map::<strong>construct &#x2014; The </strong>construct purpose</li>
-<li>Yaf_Route_Map::route &#x2014; The route purpose</li>
-</ul>
-</li>
-<li>Yaf_Route_Regex &#x2014; The Yaf_Route_Regex class<ul>
-<li>Yaf_Route_Regex::assemble &#x2014; Assemble a url</li>
-<li>Yaf_Route_Regex::__construct &#x2014; Yaf_Route_Regex constructor</li>
-<li>Yaf_Route_Regex::route &#x2014; The route purpose</li>
-</ul>
-</li>
-<li>Yaf_Route_Rewrite &#x2014; The Yaf_Route_Rewrite class<ul>
-<li>Yaf_Route_Rewrite::assemble &#x2014; Assemble a url</li>
-<li>Yaf_Route_Rewrite::__construct &#x2014; Yaf_Route_Rewrite constructor</li>
-<li>Yaf_Route_Rewrite::route &#x2014; The route purpose</li>
-</ul>
-</li>
-<li>Yaf_Router &#x2014; The Yaf_Router class<ul>
-<li>Yaf_Router::addConfig &#x2014; Add config-defined routes into Router</li>
-<li>Yaf_Router::addRoute &#x2014; Add new Route into Router</li>
-<li>Yaf_Router::__construct &#x2014; Yaf_Router constructor</li>
-<li>Yaf_Router::getCurrentRoute &#x2014; Get the effective route name</li>
-<li>Yaf_Router::getRoute &#x2014; Retrieve a route by name</li>
-<li>Yaf_Router::getRoutes &#x2014; Retrieve registered routes</li>
-<li>Yaf_Router::route &#x2014; The route purpose</li>
-</ul>
-</li>
-<li>Yaf_Route_Simple &#x2014; The Yaf_Route_Simple class<ul>
-<li>Yaf_Route_Simple::assemble &#x2014; Assemble a url</li>
-<li>Yaf_Route_Simple::__construct &#x2014; Yaf_Route_Simple constructor</li>
-<li>Yaf_Route_Simple::route &#x2014; Route a request</li>
-</ul>
-</li>
-<li>Yaf_Route_Static &#x2014; The Yaf_Route_Static class<ul>
-<li>Yaf_Route_Static::assemble &#x2014; Assemble a url</li>
-<li>Yaf_Route_Static::match &#x2014; The match purpose</li>
-<li>Yaf_Route_Static::route &#x2014; Route a request</li>
-</ul>
-</li>
-<li>Yaf_Route_Supervar &#x2014; The Yaf_Route_Supervar class<ul>
-<li>Yaf_Route_Supervar::assemble &#x2014; Assemble a url</li>
-<li>Yaf_Route_Supervar::<strong>construct &#x2014; The </strong>construct purpose</li>
-<li>Yaf_Route_Supervar::route &#x2014; The route purpose</li>
-</ul>
-</li>
-<li>Yaf_Session &#x2014; The Yaf_Session class<ul>
-<li>Yaf_Session::<strong>clone &#x2014; The </strong>clone purpose</li>
-<li>Yaf_Session::__construct &#x2014; Constructor of Yaf_Session</li>
-<li>Yaf_Session::count &#x2014; The count purpose</li>
-<li>Yaf_Session::current &#x2014; The current purpose</li>
-<li>Yaf_Session::del &#x2014; The del purpose</li>
-<li>Yaf_Session::<strong>get &#x2014; The </strong>get purpose</li>
-<li>Yaf_Session::getInstance &#x2014; The getInstance purpose</li>
-<li>Yaf_Session::has &#x2014; The has purpose</li>
-<li>Yaf_Session::<strong>isset &#x2014; The </strong>isset purpose</li>
-<li>Yaf_Session::key &#x2014; The key purpose</li>
-<li>Yaf_Session::next &#x2014; The next purpose</li>
-<li>Yaf_Session::offsetExists &#x2014; The offsetExists purpose</li>
-<li>Yaf_Session::offsetGet &#x2014; The offsetGet purpose</li>
-<li>Yaf_Session::offsetSet &#x2014; The offsetSet purpose</li>
-<li>Yaf_Session::offsetUnset &#x2014; The offsetUnset purpose</li>
-<li>Yaf_Session::rewind &#x2014; The rewind purpose</li>
-<li>Yaf_Session::<strong>set &#x2014; The </strong>set purpose</li>
-<li>Yaf_Session::<strong>sleep &#x2014; The </strong>sleep purpose</li>
-<li>Yaf_Session::start &#x2014; The start purpose</li>
-<li>Yaf_Session::<strong>unset &#x2014; The </strong>unset purpose</li>
-<li>Yaf_Session::valid &#x2014; The valid purpose</li>
-<li>Yaf_Session::<strong>wakeup &#x2014; The </strong>wakeup purpose</li>
-</ul>
-</li>
-<li>Yaf_Exception &#x2014; The Yaf_Exception class<ul>
-<li>Yaf_Exception::<strong>construct &#x2014; The </strong>construct purpose</li>
-<li>Yaf_Exception::getPrevious &#x2014; The getPrevious purpose</li>
-<li>Yaf_Exception_TypeError &#x2014; The Yaf_Exception_TypeError class</li>
-<li>Yaf_Exception_StartupError &#x2014; The Yaf_Exception_StartupError class</li>
-<li>Yaf_Exception_DispatchFailed &#x2014; The Yaf_Exception_DispatchFailed class</li>
-<li>Yaf_Exception_RouterFailed &#x2014; The Yaf_Exception_RouterFailed class</li>
-<li>Yaf_Exception_LoadFailed &#x2014; The Yaf_Exception_LoadFailed class</li>
-<li>Yaf_Exception_LoadFailed_Module &#x2014; The Yaf_Exception_LoadFailed_Module class</li>
-<li>Yaf_Exception_LoadFailed_Controller &#x2014; The Yaf_Exception_LoadFailed_Controller class</li>
-<li>Yaf_Exception_LoadFailed_Action &#x2014; The Yaf_Exception_LoadFailed_Action class</li>
-<li>Yaf_Exception_LoadFailed_View &#x2014; The Yaf_Exception_LoadFailed_View class</li>
-</ul>
+<li><p>yaf.action_prefer integer
+If there is only one part in PATH_INFO, should it consider as a controller or action.</p>
 </li>
 </ul>
+<p>If this configure On, it will be considered as a Action name.</p>
+<ul>
+<li><p>yaf.lowcase_path integer
+Whether lowercase all the path during the class autoloading.</p>
+</li>
+<li><p>yaf.use_spl_autoload integer
+When this value is On, if Yaf_Loader can not find a class, it will return FALSE, then give chance to other auto load function to be called.</p>
+</li>
+</ul>
+<p>When this value is Off(default), Yaf_Loader::autoload() will always return TRUE.</p>
+<ul>
+<li>yaf.forward_limit integer
+The max forward count, default is 5. that means you can have a max value of 5 in the forward stack.</li>
+</ul>
+<p>This is a protection for prevent recursive Yaf_Controller_Abstract::forward().</p>
+<ul>
+<li>yaf.name_suffix integer
+When this On, Yaf_Loader will identify a class by it&apos;s suffix to decide whether it is a MVC Class.</li>
+</ul>
+<p>When this Off, Yaf_Loader will look at the prefix of the class name.</p>
+<ul>
+<li>yaf.name_separator string
+When this is not empty, Yaf_Loader will identify the class suffix and string value of this.</li>
+</ul>
+<p>For example, when this value is &quot;_&quot;, Yaf_Loader will take Index_Controller as a Controller Class, IndexController as a normal class.</p>
+<ul>
+<li>yaf.cache_config integer
+If this is On, and in the meantime you are using ini config file as the parameter of Yaf_Application(), the compiling result of the ini config file will be cached in the PHP process.</li>
+</ul>
+<p>Note:
+Yaf examine the mtime of the ini file, if it was changed since last compiling, Yaf will reload it.
+Warning
+Yaf use the ini file path as the cache entry key, so do use the absolute path in ini file path, otherwise there might be some conflicts if two application use the same relative path of ini config.</p>
+<ul>
+<li>yaf.environ string
+This value is &quot;product&quot; by default, used for Yaf to fetch the config section of a ini config file.</li>
+</ul>
+<p>That is, if this value is &quot;product&quot;, Yaf will use the section named &quot;product&quot; in the ini config file(the first parameter of the Yaf_Application) as the final config of the Yaf_Application.</p>
+<ul>
+<li>yaf.use_namespace integer
+Only works as of PHP 5.3, if this value is On, All class of Yaf will named in namespace style.</li>
+</ul>
+<p>For example, Yaf_Route_Rewrite =&gt; \Yaf\Route\Rewrite, Yaf_Controller_Abstract =&gt; \Yaf\Controller_Abstract (Abstract is the keyword, can not used as a class name)</p>
 
                                 
                                 </section>
@@ -4540,8 +4312,12 @@
 
             
                 
+                <a href="installation.html" class="navigation navigation-prev " aria-label="Previous page: 安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="setup.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 安装配置">
+                
+                <a href="resources.md" class="navigation navigation-next " aria-label="Next page: 资源类型">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -4552,7 +4328,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"简介","level":"1.1","depth":1,"next":{"title":"安装配置","level":"1.2","depth":1,"path":"setup.md","ref":"setup.md","articles":[{"title":"需求","level":"1.2.1","depth":2,"path":"requirement.md","ref":"requirement.md","articles":[]},{"title":"安装","level":"1.2.2","depth":2,"path":"installation.md","ref":"installation.md","articles":[]},{"title":"运行时配置","level":"1.2.3","depth":2,"path":"runtime-configure.md","ref":"runtime-configure.md","articles":[]},{"title":"资源类型","level":"1.2.4","depth":2,"path":"resources.md","ref":"resources.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"chinese","gitbook":"*"},"file":{"path":"README.md","mtime":"2016-12-30T02:38:15.897Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-30T02:47:49.397Z"},"basePath":".","book":{"language":"chinese"}});
+            gitbook.page.hasChanged({"page":{"title":"运行时配置","level":"1.2.3","depth":2,"next":{"title":"资源类型","level":"1.2.4","depth":2,"path":"resources.md","ref":"resources.md","articles":[]},"previous":{"title":"安装","level":"1.2.2","depth":2,"path":"installation.md","ref":"installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"chinese","gitbook":"*"},"file":{"path":"runtime-configure.md","mtime":"2016-12-30T02:46:58.745Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-30T02:47:49.397Z"},"basePath":".","book":{"language":"chinese"}});
         });
     </script>
 </div>
